@@ -129,9 +129,14 @@ if [ -x "$(command -v lsd)" ]; then
     alias la='lsd -la'
 fi
 if [ -x "$(command -v nvim)" ]; then
-    alias vim="nvim"
-    alias vi="nvim"
+    alias vim="source $HOME/.nvim-venv/bin/activate nvim"
+    alias vi="source $HOME/.nvim-venv/bin/activate nvim"
 fi
 
 alias python="python3"
 alias pip="pip3"
+
+
+
+# Created by `pipx` on 2025-05-25 06:07:55
+export PATH="$PATH:/Users/devil/.local/bin"

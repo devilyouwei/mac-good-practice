@@ -76,5 +76,12 @@ Recommend nerd fonts:
 
 ## My Config
 
-See my **[zshrc](./.zshrc)**
+Add virtual env for pip neovim (for `:checkhealth vim.provider`)
 
+```bash
+python3 -m venv ~/.nvim-venv
+source ~/.nvim-venv/bin/activate
+pip install pynvim
+```
+
+See my **[zshrc](./.zshrc)**
