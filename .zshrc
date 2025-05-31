@@ -117,26 +117,24 @@ export NVM_DIR="$HOME/.nvm"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export BREW_HOME=/opt/homebrew
-export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$BREW_HOME/bin:$PATH
-export PATH="$BREW_HOME/opt/openjdk/bin:$PATH"
-export PATH="$BREW_HOME/opt/ruby/bin:$PATH"
-export PATH="$BREW_HOME/opt/curl/bin:$PATH"
+export PATH=$HOME/.cargo/bin:$PATH
+
+# Use Rust uutils/coreutils to replace BSD/coreutils
+# export PATH=$HOME/.local/uutils-coreutils:$PATH
+# USe GNU/coreutils to replace BSD/coreutils
+# export PATH=$BREW_HOME/opt/coreutils/libexec/gnubin:$PATH
 
 if [ -x "$(command -v lsd)" ]; then
     alias ls='lsd'
     alias ll='lsd -l'
     alias la='lsd -la'
+    alias dir='ls'
 fi
 if [ -x "$(command -v nvim)" ]; then
-    alias vim="source $HOME/.nvim-venv/bin/activate nvim"
-    alias vi="source $HOME/.nvim-venv/bin/activate nvim"
+    alias vi="nvim"
+    alias vim="nvim"
 fi
 
-alias python="python3"
-alias pip="pip3"
 
 
-
-# Created by `pipx` on 2025-05-25 06:07:55
-export PATH="$PATH:/Users/devil/.local/bin"
